@@ -1,0 +1,76 @@
+<?php
+/**
+ * The template for displaying the footer
+ *
+ * Contains the closing of the "off-canvas-wrap" div and all content after.
+ *
+ * @package FoundationPress
+ * @since FoundationPress 1.0.0
+ */
+
+?>
+test
+		</section>
+		<div class="footer-container" data-sticky-footer>
+			<footer class="footer">
+				<?php do_action( 'foundationpress_before_footer' ); ?>
+				<?php dynamic_sidebar( 'footer-widgets' ); ?>
+				<?php do_action( 'foundationpress_after_footer' ); ?>
+
+				<?php require_once( 'dist/assets/images/ui/wave_dark.svg' ); ?>
+
+				<nav class="footer-nav">
+					<div class="social-nav">
+						<a href="#"></a>
+						<a href="#"></a>
+					</div>
+					<div class="website-nav">
+						<?php
+							wp_nav_menu( array(
+								'menu'					 => 'pre-footer',
+								'theme_location' => 'menu-1',
+								'menu_id'        => 'pref-footer-menu',
+							) );
+						?>
+					</div>
+					<div class="newsletter-cta"><a href="#"><?php _e( '뉴스레터 구독', 'enjo' ) ?></a></div>
+				</nav>
+
+				<div class="footer-info">
+
+					<?php
+					$q = new WP_Query( array(
+						'category_name' => 'footer',
+						'posts_per_page' => 1,
+						));
+					?>
+					<?php if ( $q->have_posts() ) : ?>
+						<?php while ( $q->have_posts() ) : $q->the_post(); ?>
+							<?php the_post_thumbnail(); ?>
+							<?php the_content(); ?>
+						<?php endwhile; ?>
+						<?php wp_reset_postdata(); ?>
+					<?php endif; ?>
+
+					<?php
+						wp_nav_menu( array(
+							'menu'					 => 'footer',
+							'theme_location' => 'menu-1',
+							'menu_id'        => 'footer-menu',
+						) );
+					?>
+				</div>
+			</footer>
+		</div>
+
+		<?php do_action( 'foundationpress_layout_end' ); ?>
+
+<?php if ( get_theme_mod( 'wpt_mobile_menu_layout' ) === 'offcanvas' ) : ?>
+	</div><!-- Close off-canvas content -->
+<?php endif; ?>
+
+
+<?php wp_footer(); ?>
+<?php do_action( 'foundationpress_before_closing_body' ); ?>
+</body>
+</html>

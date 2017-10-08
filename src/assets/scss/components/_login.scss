@@ -1,0 +1,49 @@
+.login-register-tabs {
+  border: 2px $blue-gray solid;
+  border-radius: 5px;
+  text-align: center;
+  margin: 2em 0;
+  a {
+
+    color: $blue-gray;
+    background: #fff;
+    padding: .5em;
+    border-radius: 5px;
+    -webkit-transition: .3s;
+    transition: .3s;
+    &:first-of-type {
+      border-radius: 0;
+    }
+    &:last-of-type {
+      border-radius: 0;
+    }
+  }
+  .active {
+    background: $blue-gray;
+    color: #fff;
+  }
+}
+
+#customer_login {
+  .checkout-agree {
+    border:1px #bfc0c2 solid;
+    input {
+      vertical-align:top;
+      margin-top:0.5em
+    }
+    label {
+      vertical-align:top;
+      max-width:90%;
+      margin-right:0;
+      margin-bottom:0;
+    }
+    div {
+      position:relative;
+    }
+    .member {
+      .see-contract {
+        text-align:right;
+      }
+    }
+  }
+}

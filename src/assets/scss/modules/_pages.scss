@@ -1,0 +1,16 @@
+.main-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.bubble {
+  background: $water-blue;
+  position: absolute;
+  border-radius: 50%;
+  top: -250px;
+  left: 50%;
+  margin-left: -300px;
+  width: 600px;
+  height: 600px;
+  z-index: -1;
+}
