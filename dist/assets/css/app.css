@@ -7492,7 +7492,7 @@ p.wp-caption-text {
   margin-right: auto; }
 
 html body, html h1, html h2, html h3, html h4, html h5, html h6, html ul li, html p, html span, html b, html label, html input, html select, html a {
-  font-family: 'Lato', sans-serif; }
+  font-family: fantasy; }
 
 html:lang(ko-KR) body, html:lang(ko-KR) h1, html:lang(ko-KR) h2, html:lang(ko-KR) h3, html:lang(ko-KR) h4, html:lang(ko-KR) h5, html:lang(ko-KR) h6, html:lang(ko-KR) ul li, html:lang(ko-KR) p, html:lang(ko-KR) span, html:lang(ko-KR) b, html:lang(ko-KR) label, html:lang(ko-KR) input, html:lang(ko-KR) select, html:lang(ko-KR) a {
   font-family: 'Noto Sans', sans-serif; }
@@ -7504,13 +7504,13 @@ h1 {
   color: #153149; }
 
 .latofied {
-  font-family: 'Lato', sans-serif; }
+  font-family: fantasy; }
 
 input[type='number'] {
   margin-bottom: 0; }
 
 .woocommerce-Price-amount {
-  font-family: 'Lato', sans-serif;
+  font-family: fantasy;
   font-weight: 700; }
 
 @media print, screen and (min-width: 40em) {
